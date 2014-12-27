@@ -34,3 +34,7 @@ var cp = new UpnpControlPoint();
 cp.on("device", handleDevice);
 
 cp.search();
+
+var searchInterval = setInterval(function() {
+	cp.search();
+}, 1000 * 10);
